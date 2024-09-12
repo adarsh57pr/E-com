@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 
 const Recipe = () => {
-  let searchRef = useRef()
+  let searchRef = useRef();
   const [recipes, setrecipes] = useState([]);
   const [searchItem, setsearchItem] = useState("pizza");
   console.log(recipes)
