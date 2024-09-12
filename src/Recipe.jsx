@@ -17,9 +17,9 @@ const Recipe = () => {
 
   useEffect(() => {
     getAllRecipe()
-  }, [searchItem])
+  },[searchItem])
 
-  const handleSearch =(e)=>{
+  const handleSearch = (e) => {
     e.preventDefault()
     let value = searchRef.current.value;
     console.log(value)
@@ -29,7 +29,7 @@ const Recipe = () => {
   return (
 
     <div>
-      <form className="d-flex w-50 m-auto my-3 border" role="search">
+      <form className="d-flex w-50 m-auto my-3" role="search">
         <input ref={searchRef} className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
         <button onClick={handleSearch} className="btn btn-outline-success" type="submit">Search</button>
       </form>
@@ -37,8 +37,8 @@ const Recipe = () => {
 
 
         {recipes.map((ele) => {
-          return <div className="card" style={{ width: '18rem',marginTop:"15px" }}>
-            <img src={ele.recipe.image} className="card-img-top" alt="..." />
+          return <div className="card" style={{ width: '18rem', marginTop: "15px" }}>
+            <img src={ele.recipe.image} className="card-img-top my-2" alt="..." />
             <div className="card-body">
               <h5 className="card-title">{ele.recipe.label}</h5>
               {/* <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
